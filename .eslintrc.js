@@ -18,6 +18,7 @@ module.exports = {
     "no-use-before-define": "off",
     "no-param-reassign": "off",
     "no-unused-expressions": "off",
+    "no-useless-escape": "off",
   },
   plugins: ["jest"],
 };
