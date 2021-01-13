@@ -15,6 +15,9 @@ module.exports = {
     "no-console": "off",
     "no-alert": "off",
     "no-plusplus": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off",
   },
   plugins: ["jest"],
 };
