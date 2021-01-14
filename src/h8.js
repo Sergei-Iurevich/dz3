@@ -29,9 +29,9 @@ export function searchYoungMan() {
 
   if (oneStamp < twoStamp) {
     return "two";
-  } if (twoStamp < oneStamp) {
+  }
+  if (twoStamp < oneStamp) {
     return "one";
-  } 
-    return "age equal";
-  
+  }
+  return "age equal";
 }
