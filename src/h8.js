@@ -15,8 +15,8 @@ export function getHrs() {
 }
 
 export function searchYoungMan() {
-  const dateOneMan = "12.12.1887";
-  const dateTwoMan = "12.12.1987";
+  const dateOneMan = "12.12.1987";
+  const dateTwoMan = "12.12.1985";
   function getDateMan(dateStr) {
     const dd = dateStr[0] + dateStr[1];
     const mm = dateStr[3] + dateStr[4];
@@ -27,14 +27,11 @@ export function searchYoungMan() {
   const oneStamp = getDateMan(dateOneMan).getTime();
   const twoStamp = getDateMan(dateTwoMan).getTime();
 
-  console.log("oneStamp", oneStamp);
-  console.log("twoStamp", twoStamp);
-
   if (oneStamp < twoStamp) {
-    console.log("two");
-  } else if (twoStamp < oneStamp) {
-    console.log("one");
-  } else {
-    console.log("age equal");
-  }
+    return "two";
+  } if (twoStamp < oneStamp) {
+    return "one";
+  } 
+    return "age equal";
+  
 }
