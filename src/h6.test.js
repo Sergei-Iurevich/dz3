@@ -40,7 +40,6 @@ describe("Homework_6", () => {
       expect(pow(0, 0)).toBe(1);
       const { MAX_SAFE_INTEGER } = Number;
       expect(pow(Number.MAX_SAFE_INTEGER, 1)).toBe(MAX_SAFE_INTEGER);
-      // eslint-disable-next-line max-len
       expect(pow(Number.MAX_SAFE_INTEGER + 1, 1)).toBe(
         Number.MAX_SAFE_INTEGER + 1
       );
