@@ -1,6 +1,6 @@
-function task1() {
-  const a = 4;
-  const b = 5;
+export function maxOfTwoNumber() {
+  const a = Number(prompt("Enter first a number"));
+  const b = Number(prompt("Enter second a number"));
   if (a > b) {
     console.log(a);
   } else if (b > a) {
@@ -10,8 +10,8 @@ function task1() {
   }
 }
 
-function task2() {
-  const x = +prompt("Enter a number from 1 to 12");
+export function outputMonth() {
+  const x = Number(prompt("Enter a number from 1 to 12"));
   switch (x) {
     case 1:
       console.log("Январь");
@@ -56,14 +56,12 @@ function task2() {
   }
 }
 
-function task3() {
-  const circle = 12.56;
-  const square = 16;
+export function circleIntoSquare() {
+  const circle = Number(prompt("Enter a area of a circle"));
+  const square = Number(prompt("Enter a area of a square"));
   if (circle <= (square * Math.PI) / 4) {
     console.log("yes");
   } else {
     console.log("no");
   }
 }
-
-module.exports = { task1, task2, task3 };
