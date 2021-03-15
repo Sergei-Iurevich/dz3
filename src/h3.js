@@ -1,5 +1,4 @@
-function task1() {
-  // eslint-disable-next-line no-plusplus
+export function sumNumber() {
   let sum = 0;
   for (let i = 50; i <= 100; i++) {
     sum += i;
@@ -7,14 +6,14 @@ function task1() {
   console.log(sum);
 }
 
-function task2() {
+export function multiplicationTable() {
   for (let i = 1; i < 10; i++) {
     console.log(i * 7);
   }
 }
 
-function task3() {
-  const n = +prompt("Enter a number");
+export function average() {
+  const n = Number(prompt("Enter a number"));
   let amtOddNumbers = 0;
   let sum = 0;
   for (let i = 1; i <= n; i++) {
@@ -23,8 +22,7 @@ function task3() {
       sum += i;
     }
   }
-  const average = sum / amtOddNumbers;
-  console.log(average);
-}
 
-module.exports = { task1, task2, task3 };
+  const aver = sum / amtOddNumbers;
+  console.log(aver);
+}
