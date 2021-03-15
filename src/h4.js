@@ -1,25 +1,24 @@
-export function task1() {
+export function createObj() {
   const user = {
     name: "John",
   };
-  user.age = +prompt("Enter a number");
+  user.age = Number(prompt("Enter a number"));
   return user;
 }
 
-export function task2() {
+export function copyObj() {
   const user = {
     name: "John",
+    age: 39,
   };
-  user.age = +prompt("Enter a number");
-  const admin = { ...user, role: "admin" };
-  return admin;
+  return { ...user, role: "admin" };
 }
 
-export function task3() {
+export function destrObj() {
   const user = {
     name: "John",
   };
-  user.age = +prompt("Enter a number");
+  user.age = Number(prompt("Enter a number"));
   const admin = { ...user, role: "admin" };
   const { name, age, role } = admin;
   return [name, age, role];
