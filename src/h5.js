@@ -1,15 +1,15 @@
-export function task1() {
+export function sumArray() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const result = arr.reduce((sum, current) => sum + current, 0);
   console.log(result);
 }
 
-export function task2(arr) {
+export function changeArray(arr) {
   const arr1 = arr.map((item) => item * 2);
   return arr1;
 }
 
-export function task3(array) {
+export function maxAndMinItem(array) {
   if (array.length !== 0) {
     let min = array[0];
     let max = array[0];
