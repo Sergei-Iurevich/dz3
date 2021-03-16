@@ -17,7 +17,7 @@ describe("Homework_8", () => {
 
   describe("task2: function getHrs()", () => {
     let OriginalDate;
-    beforeEach(() => {
+    beforeAll(() => {
       OriginalDate = window.Date;
       window.Date = jest.fn(() => {
         const date = new OriginalDate();
