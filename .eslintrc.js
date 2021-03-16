@@ -14,6 +14,7 @@ module.exports = {
     "max-len": ["error", { ignoreComments: true }],
     "no-console": "off",
     "no-alert": "off",
+    "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
   },
   plugins: ["jest"],
 };
