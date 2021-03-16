@@ -1,13 +1,13 @@
 export function multiplicationAndSum() {
-  const a = 3;
-  const b = 7;
+  const a = Number(prompt("Enter first number"));
+  const b = Number(prompt("Enter second number"));
   console.log(a + b);
   console.log(a * b);
 }
 
 export function sumLenStrings() {
-  const str1 = "asas";
-  const str2 = "et";
+  const str1 = prompt("Enter first string");
+  const str2 = prompt("Enter second string");
   console.log(str1.length + str2.length);
 }
 
