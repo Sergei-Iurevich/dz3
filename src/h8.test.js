@@ -1,4 +1,4 @@
-import { getTheDay, getHrs, searchYoungMan } from "./h8";
+import { getTheDay, getNumberMinutes, searchYoungMan } from "./h8";
 
 describe("Homework_8", () => {
   describe("task1: function getTheDay()", () => {
@@ -19,26 +19,23 @@ describe("Homework_8", () => {
     let OriginalDate;
     beforeEach(() => {
       OriginalDate = window.Date;
-      // eslint-disable-next-line func-names
-      window.Date = function () {
+      window.Date = jest.fn(() => {
         const date = new OriginalDate();
         date.setFullYear(2020, 12, 7);
         date.setHours(1, 12, 15);
         return date;
-      };
+      });
     });
-    afterEach(() => {
+    afterAll(() => {
       window.Date = OriginalDate;
     });
     it("is function", () => {
-      expect(typeof getHrs).toBe("function");
+      expect(typeof getNumberMinutes).toBe("function");
     });
 
     it("standard case is 72", () => {
       const spyConsole = jest.spyOn(console, "log");
-      // const mockDate = new Date("2020-12-15T01:13:15.343+03:00");
-      // jest.spyOn(global, "Date").mockImplementationOnce(() => mockDate);
-      getHrs();
+      getNumberMinutes();
       expect(spyConsole.mock.calls[0][0]).toBe(72);
     });
   });

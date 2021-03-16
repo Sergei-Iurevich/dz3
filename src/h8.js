@@ -7,20 +7,19 @@ export function getTheDay() {
   return date.getDay();
 }
 
-export function getHrs() {
+export function getNumberMinutes() {
   const dateNow = new Date();
   const hrs = dateNow.getHours();
   const mins = dateNow.getMinutes();
   console.log(hrs * 60 + mins);
+  return hrs * 60 + mins;
 }
 
 export function searchYoungMan() {
   const dateOneMan = "12.12.1987";
   const dateTwoMan = "12.12.1985";
   function getDateMan(dateStr) {
-    const dd = dateStr[0] + dateStr[1];
-    const mm = dateStr[3] + dateStr[4];
-    const yyyy = dateStr[6] + dateStr[7] + dateStr[8] + dateStr[9];
+    const [mm, dd, yyyy] = dateStr.split(".").map((item) => Number(item));
     const date = new Date(`${mm} ${dd} ${yyyy}`);
     return date;
   }
