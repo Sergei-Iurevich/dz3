@@ -14,13 +14,21 @@ describe("Homework_7", () => {
       arrayTagP = el.querySelectorAll("p");
     });
 
+    function clickButton(strValue) {
+      input.value = strValue;
+      const eventInput = new Event("input");
+      input.dispatchEvent(eventInput);
+      const eventClick = new Event("click");
+      button.dispatchEvent(eventClick);
+    }
+
     it("is a function", () => {
       expect(typeof createUI).toBe("function");
     });
 
     it("create proper markup", () => {
-      expect(input).toBeTruthy;
-      expect(button).toBeTruthy;
+      expect(input).toBeTruthy();
+      expect(button).toBeTruthy();
       expect(arrayTagP.length).toBe(3);
     });
     it("At first the button is hidden", () => {
@@ -42,29 +50,15 @@ describe("Homework_7", () => {
     });
 
     it("If click on the button then a new paragraph is added", () => {
-      function clickButton() {
-        input.value = "555";
-        const eventInput = new Event("input");
-        input.dispatchEvent(eventInput);
-        const eventClick = new Event("click");
-        button.dispatchEvent(eventClick);
-      }
-      clickButton();
+      clickButton("text");
       arrayTagP = el.querySelectorAll("p");
       expect(arrayTagP.length).toBe(4);
-      expect(arrayTagP[arrayTagP.length - 1].innerText).toBe("555");
+      expect(arrayTagP[arrayTagP.length - 1].innerText).toBe("text");
     });
 
     it("old paragraphs are deleted", () => {
-      function clickButton() {
-        input.value = "4";
-        const eventInput = new Event("input");
-        input.dispatchEvent(eventInput);
-        const eventClick = new Event("click");
-        button.dispatchEvent(eventClick);
-      }
       for (let i = 0; i < 100; i++) {
-        clickButton();
+        clickButton("word");
       }
       arrayTagP = el.querySelectorAll("p");
       expect(arrayTagP.length).toBe(5);
